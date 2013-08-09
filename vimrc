@@ -36,4 +36,6 @@ let mapleader=","
 "" Toggle NerdTREE
 map <leader>n :NERDTreeToggle<CR> 
 "" restart VimRC
-map <leader>sv :so $MYVIMRC<CR>   
+map <leader>sv :so $MYVIMRC<CR>
+"" ,, opens previous buffer
+nnoremap <leader><leader> <c-^>
