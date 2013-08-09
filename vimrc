@@ -4,7 +4,7 @@ execute pathogen#infect()
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable
 set encoding=utf-8
-set showcmd                     " display incomplete commands
+""" set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 
 "" Misc
@@ -22,14 +22,18 @@ set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
-set wrapscan                    " Start from top when reaching end in search
-
+set wrapscan                    " Start from top when reaching end in searcd
 "" Solarized
 set background=dark
-"" colorscheme solarized
+if has('gui_running')
+    colorscheme solarized
+endif
 
 "" Leader
 let mapleader=","
 
-map <leader>n :NERDTreeToggle<cr> "" Toggle NerdTREE
-map <leader>sv :so $MYVIMRC<cr>   "" restart VimRC
+"" mappings
+"" Toggle NerdTREE
+map <leader>n :NERDTreeToggle<CR> 
+"" restart VimRC
+map <leader>sv :so $MYVIMRC<CR>   
