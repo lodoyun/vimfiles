@@ -31,5 +31,5 @@ set background=dark
 "" Leader
 let mapleader=","
 
-"" map <leader>n :NERDTreeToggle<cr> "" Toggle NerdTREE
+map <leader>n :NERDTreeToggle<cr> "" Toggle NerdTREE
 map <leader>sv :so $MYVIMRC<cr>   "" restart VimRC
