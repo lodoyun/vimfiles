@@ -12,3 +12,5 @@ My configuration uses [Pathogen](https://github.com/tpope/vim-pathogen) and git 
 
 ### NERDTree
 ### Solarized
+### Ack.vim
+### Vim-commentary
