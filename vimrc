@@ -29,18 +29,28 @@ if has('gui_running')
     colorscheme solarized
 endif
 
+"" setting backup and swap dirs
+set backupdir=/tmp
+set directory=/tmp
+
 "" Leader
 let mapleader=","
 
 "" mappings
-"" Toggle NerdTREE
-map <leader>n :NERDTreeToggle<CR> 
 "" restart VimRC
 map <leader>sv :so $MYVIMRC<CR>
 "" ,, opens previous buffer
 nnoremap <leader><leader> <c-^>
 "" %% is expanded to current directory of the file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
-"" ,f finds in project. ,F finds in the directory of the file
+"" Command-t mappings: ,f finds in project. ,F finds in the directory of the file
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+""TagBar
+map <leader>rt :TagbarToggle<cr>
+
+"" splitting preferences
+set splitright
+set splitbelow
+
