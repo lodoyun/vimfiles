@@ -47,6 +47,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
+"" Remapping autocomplete in insert mode
+inoremap <C-space> <C-n>
+
 ""TagBar
 map <leader>rt :TagbarToggle<cr>
 
