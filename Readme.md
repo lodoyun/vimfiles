@@ -2,6 +2,10 @@ Lodoyun's vim configuration
 ==========================
 
 My configuration uses [Pathogen](https://github.com/tpope/vim-pathogen) and git submodules.
+## Instalation:
+
+* Update submodules by running: git submodule update --init
+* Compile command-t
 
 ## Features:
 
