@@ -53,6 +53,9 @@ inoremap <C-space> <C-n>
 ""TagBar
 map <leader>rt :TagbarToggle<cr>
 
+""ToggleWrap
+map <leader>tw :set wrap!<cr>
+
 "" splitting preferences
 set splitright
 set splitbelow
