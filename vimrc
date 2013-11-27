@@ -56,6 +56,10 @@ map <leader>rt :TagbarToggle<cr>
 ""ToggleWrap
 map <leader>tw :set wrap!<cr>
 
+""Tabnext and tab previous
+map <D-S-Right> :tabNext<cr>
+map <D-S-Left> :tabprevious<cr>
+
 "" splitting preferences
 set splitright
 set splitbelow
