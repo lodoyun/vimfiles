@@ -60,6 +60,10 @@ map <leader>tw :set wrap!<cr>
 map <D-S-Right> :tabNext<cr>
 map <D-S-Left> :tabprevious<cr>
 
+""Git actions: status and diff
+map <leader>gs :Gstatus<cr>
+map <leader>gd :Gdiff<cr>
+
 "" splitting preferences
 set splitright
 set splitbelow
