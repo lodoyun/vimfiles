@@ -67,4 +67,5 @@ map <leader>gd :Gdiff<cr>
 "" splitting preferences
 set splitright
 set splitbelow
-
+"" filetype (for javascript)
+filetype plugin indent on
