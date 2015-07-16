@@ -64,6 +64,10 @@ map <D-S-Left> :tabprevious<cr>
 map <leader>gs :Gstatus<cr>
 map <leader>gd :Gdiff<cr>
 
+""Spelling and wrap, english and spanish
+map <leader>es :set wrap<cr> :set spell<cr> :set spelllang=es<cr>
+map <leader>us :set wrap<cr> :set spell<cr> :set spelllang=en_us<cr>
+
 "" splitting preferences
 set splitright
 set splitbelow
