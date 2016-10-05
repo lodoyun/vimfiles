@@ -44,8 +44,7 @@ nnoremap <leader><leader> <c-^>
 "" %% is expanded to current directory of the file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 "" Command-t mappings: ,f finds in project. ,F finds in the directory of the file
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+map <leader>f <C-P>
 
 "" Remapping autocomplete in insert mode
 inoremap <C-space> <C-n>
