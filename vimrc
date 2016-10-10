@@ -45,6 +45,7 @@ nnoremap <leader><leader> <c-^>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 "" Command-t mappings: ,f finds in project. ,F finds in the directory of the file
 map <leader>f <C-P>
+let g:ctrlp_working_path_mode = 'a'
 
 "" Remapping autocomplete in insert mode
 inoremap <C-space> <C-n>
@@ -74,15 +75,18 @@ set splitbelow
 filetype plugin indent on
 set guifont=Monaco:h10
 
-"" Syntastic
-""set statusline+=%#warningmsg#
-""set statusline+=%{SyntasticStatuslineFlag()}
-""set statusline+=%*
 let g:netrw_browse_split = 0
 "" Default to tree style
 let g:netrw_liststyle = 3
-""let g:syntastic_always_populate_loc_list = 1
-""let g:syntastic_auto_loc_list = 1
-""let g:syntastic_check_on_open = 0
-""let g:syntastic_check_on_wq = 0
-""map <leader>sc :SyntasticCheck<cr>
+"" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_cpp_checkers = ['cpplint']
+
+map <leader>sc :SyntasticCheck<cr>
