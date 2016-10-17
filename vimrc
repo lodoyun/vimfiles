@@ -79,14 +79,15 @@ let g:netrw_browse_split = 0
 "" Default to tree style
 let g:netrw_liststyle = 3
 "" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+""set statusline+=%#warningmsg#
+""set statusline+=%{SyntasticStatuslineFlag()}
+""set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright,-build/include --linelength=120'
 let g:syntastic_cpp_checkers = ['cpplint']
-
+let g:syntastic_js_checkers = ['jshint']
 map <leader>sc :SyntasticCheck<cr>
