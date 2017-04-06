@@ -26,7 +26,7 @@ set wrapscan                    " Start from top when reaching end in searcd
 "" Solarized
 set background=dark
 if has('gui_running')
-    colorscheme torte
+    colorscheme solarized
 endif
 
 "" setting backup and swap dirs
