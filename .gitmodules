@@ -28,3 +28,6 @@
 [submodule "bundle/vim-colors-solarized-black"]
 	path = bundle/vim-colors-solarized-black
 	url = https://github.com/dolph/vim-colors-solarized-black.git
+[submodule "bundle/vim-one"]
+	path = bundle/vim-one
+	url = git@github.com:rakr/vim-one.git

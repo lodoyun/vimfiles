@@ -23,11 +23,9 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 set wrapscan                    " Start from top when reaching end in searcd
-"" Solarized
+"" Coloscheme
+colorscheme one
 set background=dark
-if has('gui_running')
-    colorscheme solarized
-endif
 
 "" setting backup and swap dirs
 set backupdir=/tmp
@@ -89,5 +87,12 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_cpplint_exec = 'cpplint'
 let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright,-build/include --linelength=120'
 let g:syntastic_cpp_checkers = ['cpplint']
-let g:syntastic_js_checkers = ['jshint']
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:syntastic_javascript_checkers = ['eslint']
 map <leader>sc :SyntasticCheck<cr>
+
+""" IndentGuides
+set ts=4 sw=4 et
+let g:intent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
