@@ -87,7 +87,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_cpplint_exec = 'cpplint'
 let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright,-build/include --linelength=120'
 let g:syntastic_cpp_checkers = ['cpplint']
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:syntastic_javascript_eslint_exec = 'eslint' " this needs to point to a valid binary
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 let g:syntastic_javascript_checkers = ['eslint']
 map <leader>sc :SyntasticCheck<cr>
 
