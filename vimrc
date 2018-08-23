@@ -90,10 +90,12 @@ let g:syntastic_cpp_checkers = ['cpplint']
 let g:syntastic_javascript_eslint_exec = 'eslint' " this needs to point to a valid binary
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 map <leader>sc :SyntasticCheck<cr>
+map <leader>ss :SyntasticToggleMode<cr>
 
 """ IndentGuides
-set ts=4 sw=4 et
+"" set ts=4 sw=4 et
 let g:intent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
