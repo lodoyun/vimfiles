@@ -80,20 +80,28 @@ let g:netrw_liststyle = 3
 ""set statusline+=%#warningmsg#
 ""set statusline+=%{SyntasticStatuslineFlag()}
 ""set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_cpplint_exec = 'cpplint'
-let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright,-build/include --linelength=120'
-let g:syntastic_cpp_checkers = ['cpplint']
-let g:syntastic_javascript_eslint_exec = 'eslint' " this needs to point to a valid binary
-let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-map <leader>sc :SyntasticCheck<cr>
-map <leader>ss :SyntasticToggleMode<cr>
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_cpp_cpplint_exec = 'cpplint'
+" let g:syntastic_cpp_cpplint_args = '--filter=-legal/copyright,-build/include --linelength=120'
+" let g:syntastic_cpp_checkers = ['cpplint']
+" let g:syntastic_javascript_eslint_exec = 'eslint' " this needs to point to a valid binary
+" let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['javascript', 'cpp'],'passive_filetypes': [] }
+" map <leader>sc :SyntasticCheck<cr>
+" map <leader>ss :SyntasticToggleMode<cr>
 
+"" ale
+let g:ale_echo_msg_format = '%linter%: %s'
+let g:ale_linters = {
+      \ 'javascript': ['eslint'],
+      \ 'cpp': ['cpplint'],
+      \ 'python': ['flake8']
+      \}
+let g:ale_cpp_cpplint_options = '--filter=-legal/copyright,-build/include --linelength=120'
 """ IndentGuides
 "" set ts=4 sw=4 et
 let g:intent_guides_start_level = 2
